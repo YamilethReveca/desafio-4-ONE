@@ -31,7 +31,7 @@ function jugarAdivinanza() {
 
             if (intentos < 3) {
                 
-                alert(`\u{1F622}  ¡Oh no!, ese no es el número secreto. Intenta de nuevo. Te quedan Solo tienes ${reduciendoConteo} ${palabraS} más.`);
+                alert(`\u{1F622}  ¡Oh no!, ese no es el número secreto. Intenta de nuevo. Tienes Solo ${reduciendoConteo} ${palabraS} más.`);
             
             }
               
@@ -39,7 +39,7 @@ function jugarAdivinanza() {
     }
 
     if (!acierto) {
-        alert(`\u{274C} Fallaste, no adivinaste el número secreto. El número secreto era: ${numeroSecreto}`);
+        alert(`\u{274C} Fallaste, no adivinaste el número secreto. El número secreto es: ${numeroSecreto}`);
     }
 
     if (confirm("¿Quieres jugar de nuevo?")) {
