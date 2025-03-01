@@ -14,7 +14,7 @@ function jugarAdivinanza() {
     let intentos = 0; // Intentos inicia en 0 y no debe pasar de 3.
     let acierto = false; // Inicializo el acierto con false   
     let reduciendoConteo = 3; // mostrar disminución del conteo al usuario solo 2 intentos más.
-    let intentosRestantes = reduciendoConteo >= 2 ? 'intentos' : 'intento'; //  singular y plural
+    let palabraS="";
     while (!acierto && intentos < 3) {
         const obtenerNumeroUsuario = parseInt(prompt('¿Adivina el número secreto?'));// obtengo el número del usuario.
 
@@ -24,10 +24,14 @@ function jugarAdivinanza() {
 
         } else { // sino acierto, tengo 2 intentos más            
 
-            intentos++;            
+            intentos++; 
+            reduciendoConteo--;
+
+            palabraS=reduciendoConteo === 1 ? 'intento' : 'intentos'; //  singular y plural  
 
             if (intentos < 3) {
-                alert(`\u{1F622}  ¡Oh no!, ese no es el número secreto. Intenta de nuevo. Te quedanSolo tienes ${reduciendoConteo--} ${intentosRestantes} más.`);
+                
+                alert(`\u{1F622}  ¡Oh no!, ese no es el número secreto. Intenta de nuevo. Te quedan Solo tienes ${reduciendoConteo} ${palabraS} más.`);
             
             }
               
